@@ -805,21 +805,47 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Payment & Return Policy</a>
-            </div>
-            <div class="footer-logo">Deep<span>Clean</span></div>
-            <p>&copy; 2025 DeepClean Los Angeles. All rights reserved. | Licensed & Insured</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-yelp"></i></a>
-            </div>
+    <div class="footer-content">
+        <div class="footer-logo">Deep<span>Clean</span></div>
+        <p>© 2025 DeepClean Los Angeles. All rights reserved. | Licensed & Insured</p>
+        <div class="footer-links">
+            <a href="#" data-modal="terms">Terms & Conditions</a> |
+            <a href="#" data-modal="return">Return Policy</a> |
+            <a href="#" data-modal="privacy">Privacy Policy</a>
         </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-yelp"></i></a>
+        </div>
+    </div>
     </footer>
+
+<!-- ==================== MODALS ==================== -->
+    <div id="terms" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">X</button>
+            <h3>Terms & Conditions</h3>
+            <p>1. Services are performed by fully insured professionals.</p>
+            <p>2. Cancellations must be made 24 hours prior to the scheduled appointment.</p>
+            <p>3. We reserve the right to refuse service if the property is unsafe.</p>
+            <p>4. Payment is due upon completion of the service unless a contract states otherwise.</p>
+        </div>
+    </div>
+    <div id="return" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">X</button>
+            <h3>Return Policy</h3>
+            <p>We guarantee your satisfaction. If you are not happy with the cleaning within 24 hours, we will re-clean the area free of charge.</p>
+        </div>
+    </div>
+    <div id="privacy" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">X</button>
+            <h3>Privacy Policy</h3>
+            <p>We collect only the information necessary to provide our services (name, address, phone, email). Your data is never sold or shared with third parties. All information is stored securely and deleted upon request.</p>
+        </div>
+    </div>
 
     <script>
         // Smooth scrolling
