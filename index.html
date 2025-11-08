@@ -80,16 +80,6 @@
         .review-stars {color:#f9c22e;}
         .review-text {font-style:italic;color:#555;line-height:1.6;}
 
-        /* ---- NEW SECTION: FAQ ---- */
-        .faq {background:#fff;border-radius:20px;padding:80px 5%;box-shadow:0 15px 40px rgba(0,0,0,.05);border:1px solid #e0e0e0;}
-        .faq-item {margin-bottom:1.5rem;border-bottom:1px solid #e0e0e0;padding-bottom:1.5rem;opacity:0;transform:translateX(-30px);transition:all .6s;}
-        .faq-question {font-weight:600;color:#1a5fbb;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:1.1rem;padding:1rem;background:#f8f9ff;border-radius:10px;transition:all .3s;}
-        .faq-question:hover {background:#eef2ff;}
-        .faq-question::after {content:'+';font-weight:bold;color:#00b894;font-size:1.5rem;transition:transform .3s;}
-        .faq-answer {margin-top:0;color:#444;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;padding:0 1rem;background:#fafafa;border-radius:8px;}
-        .faq-item.active .faq-answer {max-height:300px;padding:1rem;margin-top:.5rem;}
-        .faq-item.active .faq-question::after {content:'−';transform:rotate(180deg);}
-
         /* ---- PAYMENT, CONTACT, FOOTER, MODALS (unchanged) ---- */
         .payment {background:#f8f9ff;padding:60px 5%;text-align:center;border-radius:20px;margin:2rem auto;max-width:1200px;box-shadow:0 10px 30px rgba(0,0,0,.05);}
         .payment h3 {font-size:2rem;color:#1a5fbb;margin-bottom:1rem;}
@@ -303,35 +293,6 @@
         </div>
     </section>
 
-    <!-- ==== NEW: FAQ ==== -->
-    <section id="faq" class="faq">
-        <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-            <p>Got questions? We’ve got answers.</p>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item">
-                <div class="faq-question">How long does a standard cleaning take?<span></span></div>
-                <div class="faq-answer">A typical 3-bedroom house takes 3–4 hours with a 2-person team. Larger homes or deep cleans may take longer.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Do I need to provide cleaning supplies?<span></span></div>
-                <div class="faq-answer">No—all professional-grade, eco-friendly supplies and equipment are included in the price.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Are your cleaners insured and background-checked?<span></span></div>
-                <div class="faq-answer">Yes. Every team member is fully insured, bonded, and has passed a thorough background check.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">What is your cancellation policy?<span></span></div>
-                <div class="faq-answer">Cancellations with at least 24 hours notice are free. Same-day cancellations incur a $50 fee.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Do you offer recurring discounts?<span></span></div>
-                <div class="faq-answer">Yes! Weekly clients save 15%, bi-weekly save 10%, and monthly save 5%.</div>
-            </div>
-        </div>
-    </section>
 
     <!-- Payment Methods Section -->
     <section class="payment animate-on-scroll">
@@ -430,15 +391,7 @@
             });
         });
 
-        // FAQ Accordion (Why Us & Reviews use animate-on-scroll only)
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                const item = q.parentElement;
-                const wasActive = item.classList.contains('active');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-                if (!wasActive) item.classList.add('active');
-            });
-        });
+        
 
         // Scroll Animations
         const observer = new IntersectionObserver(entries => {
